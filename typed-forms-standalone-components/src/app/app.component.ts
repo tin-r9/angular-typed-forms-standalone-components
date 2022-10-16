@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'typed-forms-standalone-components';
+
+  form = new FormGroup({
+    email: new FormControl<string | null>(null),
+    age: new FormControl<number | null>(null),
+  });
+
+  /*form = new UntypedFormGroup({
+    email: new UntypedFormControl(null),
+    age: new UntypedFormControl(null),
+  });*/
+
+  onSumbit() {
+    if (this.form.value.email)
+    console.log(this.form.value.email.length);
+  }
 }
