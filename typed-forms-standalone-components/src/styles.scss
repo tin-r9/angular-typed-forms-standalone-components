@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+$bg_body: #212121;
+body {
+    background-color: $bg_body;
+    color: #fff;
+    font-family: monospace, serif;
+    letter-spacing: 0.05em;
+}
