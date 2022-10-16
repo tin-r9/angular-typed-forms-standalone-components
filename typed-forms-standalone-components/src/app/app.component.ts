@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule, UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
+  //standalone: true,
+  //imports: [ReactiveFormsModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
