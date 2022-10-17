@@ -20,7 +20,7 @@ export class AppComponent {
     age: new UntypedFormControl(null),
   });*/
 
-  onSumbit() {
+  onSubmit() {
     if (this.form.value.email)
     console.log(this.form.value.email.length);
   }
