@@ -25,7 +25,6 @@ export class AppComponent {
       console.log(this.form.value.email.length);
     }
     //console.log(this.form.value.age + 1);
-
     this.form.reset();
     console.log(this.form.value.age), 'Edad';
     console.log(this.form.value.email, 'Email'); //Al no agregar la property {nonNullable: true} por mas que nuestro form control tenga tipo, el mismo puede ser null
@@ -38,4 +37,5 @@ export class AppComponent {
       age: 12 // si en este caso eliminamos el tipo especifico veremos como se desarrolla un error al ser null
     });
   }
+
 }
