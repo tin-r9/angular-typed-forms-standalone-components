@@ -15,19 +15,14 @@ export class AppComponent {
     age: new FormControl<number | null>(null),
   });
 
-  /*form = new UntypedFormGroup({
-    email: new UntypedFormControl(null),
-    age: new UntypedFormControl(null),
-  });*/
-
   onSubmit() {
     if (this.form.value.email) {
       console.log(this.form.value.email.length);
     }
-    //console.log(this.form.value.age + 1);
     this.form.reset();
     console.log(this.form.value.age), 'Edad';
-    console.log(this.form.value.email, 'Email'); //Al no agregar la property {nonNullable: true} por mas que nuestro form control tenga tipo, el mismo puede ser null
+    console.log(this.form.value.email, 'Email'); 
+    //Al no agregar la property {nonNullable: true} por mas que nuestro form control tenga tipo, el mismo puede ser null
     this.setValues();
   }
 
